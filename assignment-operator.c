@@ -1,23 +1,26 @@
 #include <stdio.h>
-void compare(char a, char b);
+void compare(int a, int b);
 int main()
 {
     printf("Hello World!!!\n");
 
-    char a = '1';
+    int a = 1;
     int b = 1;
 
-    char c;
-    c = scanf("\n%c", &c);
-    printf("input char is = \n", c);
+    int c = 0;
+    int x = scanf("%d", &c);
+    printf("input value given by user is =%d\n", c);
+    printf("address of c where input is stored is == %u\n", &c);
+    printf("scanf method retun value is =%d\n", x);
+    printf("\n");
     compare(a, c);
     return 0;
 }
 
-void compare(char a, char b)
+void compare(int a, int c)
 {
-    if (a == b)
-        printf("Both are equal %c and %c\n", a, b);
+    if (a == c)
+        printf("Both are equal %d and %d\n", a, c);
     else
-        printf("%c and %c are not equal\n", a, b);
+        printf("%d and %d are not equal\n", a, c);
 }
