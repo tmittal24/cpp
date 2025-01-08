@@ -7,32 +7,42 @@ using namespace std;
 void printDetails(Student myObj);
 int main()
 {
-
   {
     Student myObj1; // Create an object of MyClass
+
     // Access attributes and set values
     myObj1.age = 18;
     myObj1.name = "Trijal";
     myObj1.myMethod();
-    Student::group = "g1";
-
     printDetails(myObj1);
+
+    // Access static variable
+    Student::group = "A";
   }
 
   {
     Student myObj2("Ritu", 4); // Create an object of MyClass
-    myObj2.name = "ritu222";
-    Student::group = "g2";
+
+    Student myObj3("Ritu", 4, "ritu is great"); // Create an object of MyClass
+    // Access static variable
+    Student::group = "B";
+
     // Print attribute values
     printDetails(myObj2);
   }
 
   {
-    //
-    Student *myObj2 = new Student("",""); // Create an object of MyClass
-    Student::group = "g2";
+    // Create an object of MyClass using new keyword
+    Student *myObj4 = new Student();
+    Student *myObj5 = new Student("shammi", 5);
+
+    // Access static variable
+    Student::group = "C";
+
     // Print attribute values
-    printDetails(myObj2);
+    printDetails(*myObj5);
+
+    cout << "--------------------------------" << "\n";
   }
 
   return 0;
