@@ -16,6 +16,8 @@ int main (){
         movie1.isPopular==movie2.isPopular&&
         movie1.director==movie2.director);
     cout<<"both movies are same";
+    struct movie arr[3];
+    arr[0].isPopular=true;
     
 
 }
